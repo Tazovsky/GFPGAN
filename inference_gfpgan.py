@@ -38,6 +38,7 @@ def main():
         args.test_path = args.test_path[:-1]
     os.makedirs(args.save_root, exist_ok=True)
 
+    recompute_scale_factor=True
     # background upsampler
     if args.bg_upsampler == 'realesrgan':
         if not torch.cuda.is_available():  # CPU
